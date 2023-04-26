@@ -1,0 +1,155 @@
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --White: hsl(0, 0%, 100%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+}
+
+body {
+  background-color: var(--Light-grey);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: white;
+  width: 95vw;
+  border-radius: 0.5em 0.5em 3.5em 0.5em;
+  min-width: 375px;
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 18em;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90%;
+  gap: 10px;
+  margin: 0.5em;
+}
+
+@media (min-width: 600px) {
+  form {
+    width: 70%;
+    margin: 0.5em 0.5em 0.5em 0.8em;
+  }
+}
+.day #day-date,
+.month #month-date,
+.year #year-date {
+  width: 100%;
+  height: 3em;
+  border-radius: 0.4em;
+  font-size: 0.6rem;
+  border-width: 0.5px;
+}
+
+.day > label,
+.month > label,
+.year > label {
+  color: var(--Smokey-grey);
+  font-size: 0.4rem;
+  letter-spacing: 1px;
+}
+
+.break {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5em;
+}
+
+@media (min-width: 600px) {
+  .break {
+    margin-left: 0.8em;
+    align-items: end;
+  }
+}
+
+hr {
+  width: 100%;
+  opacity: 0.2;
+}
+
+button {
+  position: absolute;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  border: none;
+  width: 2em;
+  background-color: var(--Purple);
+}
+
+button > img {
+  width: 1em;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--Light-grey);
+}
+
+input {
+  text-indent: 15px;
+}
+
+.display-date span {
+  color: var(--Purple);
+  font-size: 1.7rem;
+}
+
+.display-date {
+  font-weight: 800;
+  font-style: italic;
+  padding: 0.4em;
+  margin: 0;
+}
+
+.display-date p {
+  font-size: 1.7rem;
+}
+
+@media (min-width: 600px) {
+  .display-date {
+    margin-left: 0.5em;
+  }
+
+  .display-date p,
+  .display-date span {
+    font-size: 2rem;
+  }
+}
+
+.display-error {
+  font-size: 0.35rem;
+  color: red;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.red-border {
+  border-color: red;
+}
